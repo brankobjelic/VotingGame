@@ -1,10 +1,13 @@
 import express from 'express'
 import connectDB from './config/db';
 import jokeRoutes from './routes/jokes';
+import cors from 'cors';
 
+const port = process.env.PORT || 3000;
 
 const app = express();
-const port = process.env.PORT || 3000;
+
+app.use(cors());
 
 connectDB();
 
