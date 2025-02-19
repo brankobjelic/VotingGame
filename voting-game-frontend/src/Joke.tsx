@@ -16,6 +16,7 @@ interface Joke {
 const Joke = () => {
     const [joke, setJoke] = useState<Joke | null>(null);
     const [voteCounts, setVoteCounts] = useState<{ [key: string]: number }>({});
+    const [showAnswer, setShowAnswer] = useState<boolean>(false); // State to control answer visibility
 
     const emojis = ['😂', '❤️', '👍'];
 
@@ -28,6 +29,10 @@ const Joke = () => {
                 acc[label] = value;
                 return acc;
             }, {}));
+            setShowAnswer(false); // Reset answer visibility
+            setTimeout(() => {
+                setShowAnswer(true); // Show answer after 5 seconds
+            }, 3000);
         } catch (error) {
             console.error('Error fetching joke:', error);
         }
@@ -66,7 +71,7 @@ const Joke = () => {
                 <div className="card text-center">
                     <div className="card-body">
                         <h3 className="card-title mb-5">{joke.question}</h3>
-                        <h5 className="card-text mb-5">{joke.answer}</h5>
+                        <h5 className="card-text" style={{ minHeight: '1.5em' }}>{showAnswer && joke.answer}</h5>
                         <div className="mb-3">
                             {emojis.map((emoji) => (
                                 <button
