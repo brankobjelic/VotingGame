@@ -76,7 +76,7 @@ const Joke = () => {
                             {emojis.map((emoji) => (
                                 <button
                                     key={emoji}
-                                    className="btn btn-light mx-2"
+                                    className="btn btn-light"
                                     onClick={() => handleVote(emoji)}
                                 >
                                     {emoji} {voteCounts[emoji] || 0}
