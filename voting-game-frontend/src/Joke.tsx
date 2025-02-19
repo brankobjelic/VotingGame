@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useSession } from './SessionContext'; // Import the useSession hook
 
 interface Vote {
     label: string;
@@ -14,6 +15,7 @@ interface Joke {
 }
 
 const Joke = () => {
+    const { user, login, logout } = useSession(); // Use session context
     const [joke, setJoke] = useState<Joke | null>(null);    // State to store joke data
     const [voteCounts, setVoteCounts] = useState<{ [key: string]: number }>({});    // State to store vote counts
     const [showAnswer, setShowAnswer] = useState<boolean>(false);   // State to control answer visibility
@@ -70,6 +72,16 @@ const Joke = () => {
 
   return (
     <div className="container mt-5">
+        <div className="text-center mb-3">   {/* Display login/logout button */}
+            {user ? (
+                <>
+                    <h5>Welcome, {user}!</h5>
+                    <button className="btn btn-danger" onClick={logout}>Logout</button>
+                </>
+            ) : (
+                <button className="btn btn-success" onClick={() => login('User')}>Login</button>
+            )}
+        </div>
             {joke ? (   // Render joke if available
                 <div className="card text-center">
                     <div className="card-body">
