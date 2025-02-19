@@ -1,0 +1,135 @@
+[{
+  "_id": {
+    "$oid": "67b2246229c9aebb2b48d290"
+  },
+  "question": "What do you get if you lock a monkey with a typewriter?",
+  "answer": "A regex.",
+  "availableVotes": [
+    "😂",
+    "👍",
+    "❤️"
+  ],
+  "votes": [
+    {
+      "value": 0,
+      "label": "😂"
+    },
+    {
+      "value": 0,
+      "label": "👍"
+    },
+    {
+      "value": 0,
+      "label": "❤️"
+    }
+  ],
+  "id": "monkey-typewriter"
+},
+{
+  "_id": {
+    "$oid": "67b22d8529c9aebb2b48d294"
+  },
+  "question": "Why did the worker get fired from the keyboard factory?",
+  "answer": "Missed too many shifts",
+  "availableVotes": [
+    "😂",
+    "👍",
+    "❤️"
+  ],
+  "votes": [
+    {
+      "value": 0,
+      "label": "😂"
+    },
+    {
+      "value": 0,
+      "label": "👍"
+    },
+    {
+      "value": 0,
+      "label": "❤️"
+    }
+  ],
+  "id": "cherry"
+},
+{
+  "_id": {
+    "$oid": "67b22f9229c9aebb2b48d297"
+  },
+  "question": "Why did the programmer quit?",
+  "answer": "They didn't get arrays.",
+  "availableVotes": [
+    "😂",
+    "👍",
+    "❤️"
+  ],
+  "votes": [
+    {
+      "value": 0,
+      "label": "😂"
+    },
+    {
+      "value": 0,
+      "label": "👍"
+    },
+    {
+      "value": 0,
+      "label": "❤️"
+    }
+  ],
+  "id": "byte-me"
+},
+{
+  "_id": {
+    "$oid": "67b22f9229c9aebb2b48d298"
+  },
+  "question": "Why did the programmer get the job?",
+  "answer": "Passed by reference.",
+  "availableVotes": [
+    "😂",
+    "👍",
+    "❤️"
+  ],
+  "votes": [
+    {
+      "value": 0,
+      "label": "😂"
+    },
+    {
+      "value": 0,
+      "label": "👍"
+    },
+    {
+      "value": 0,
+      "label": "❤️"
+    }
+  ],
+  "id": "programmer-job"
+},
+{
+  "_id": {
+    "$oid": "67b22f9229c9aebb2b48d299"
+  },
+  "question": "How can you tell the ocean is friendly?",
+  "answer": "It waves.",
+  "availableVotes": [
+    "😂",
+    "👍",
+    "❤️"
+  ],
+  "votes": [
+    {
+      "value": 0,
+      "label": "😂"
+    },
+    {
+      "value": 0,
+      "label": "👍"
+    },
+    {
+      "value": 0,
+      "label": "❤️"
+    }
+  ],
+  "id": "ocean-waves"
+}]
