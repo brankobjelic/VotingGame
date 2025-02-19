@@ -48,3 +48,18 @@ export const submitVote = async (req: Request, res: Response) => {
       res.status(500).json({ message: 'Server error' });
     }
 };
+
+export const deleteJoke = async (req: Request, res: Response) => {
+    const { id } = req.params;
+    try {
+        const joke = await Joke.findOne({ id });
+
+        if (!joke) {
+          return res.status(404).json({ message: 'No jokes found' });
+        }
+        await joke.deleteOne();
+        res.status(200).json({ message: 'Joke deleted' });
+    } catch (error) {
+      res.status(500).json({ message: 'Server error' });
+    } 
+};
