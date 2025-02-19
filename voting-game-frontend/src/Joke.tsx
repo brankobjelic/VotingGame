@@ -71,7 +71,7 @@ const Joke = () => {
                 <div className="card text-center">
                     <div className="card-body">
                         <h3 className="card-title mb-5">{joke.question}</h3>
-                        <h5 className="card-text" style={{ minHeight: '1.5em' }}>{showAnswer && joke.answer}</h5>
+                        <h4 className="card-text" style={{ minHeight: '1.5em' }}>{showAnswer && joke.answer}</h4>
                         <div className="mb-3">
                             {emojis.map((emoji) => (
                                 <button
