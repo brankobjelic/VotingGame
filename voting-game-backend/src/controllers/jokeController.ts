@@ -63,3 +63,23 @@ export const deleteJoke = async (req: Request, res: Response) => {
       res.status(500).json({ message: 'Server error' });
     } 
 };
+
+export const updateJoke = async (req: Request, res: Response) => {
+    const { id } = req.params;
+    const { question, answer } = req.body;
+  
+    try {
+      const joke = await Joke.findOne({ id });
+      if (!joke) {
+        return res.status(404).json({ message: 'Joke not found' });
+      }
+  
+      joke.question = question;
+      joke.answer = answer;
+  
+      await joke.save();
+      res.status(200).json(joke);
+    } catch (error) {
+      res.status(500).json({ message: 'Server error' });
+    }
+}
